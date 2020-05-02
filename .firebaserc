@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "rc-health-4c0a4": {
+      "hosting": {
+        "rc-health": [
+          "rc-health-4c0a4"
+        ]
+      }
+    }
+  }
+}
