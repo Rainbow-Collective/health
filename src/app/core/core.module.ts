@@ -1,12 +1,14 @@
-import { SharedModule } from './../shared/shared.module';
-import { EnsureModuleLoadedOnceGuard } from './../shared/guards/ensure-loaded-once.guard';
+import { environment } from '@env';
+import { SharedModule } from '@shared/shared.module';
+import { EnsureModuleLoadedOnceGuard } from '@shared/guards/ensure-loaded-once.guard';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './components/layout/layout.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { AngularFireModule } from '@angular/fire';
+import 'firebase/firestore';
 
 @NgModule({
   declarations: [LayoutComponent],
@@ -15,7 +17,9 @@ import {MatIconModule} from '@angular/material/icon';
     SharedModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    AngularFireModule.initializeApp(environment),
+
   ],
   exports: [
     LayoutComponent
