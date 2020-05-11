@@ -9,9 +9,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { AngularFireModule } from '@angular/fire';
 import 'firebase/firestore';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './auth/verify-email/verify-email.component';
 
 @NgModule({
-  declarations: [LayoutComponent],
+  declarations: [LayoutComponent, LoginComponent, RegisterComponent, ForgotPasswordComponent, VerifyEmailComponent],
   imports: [
     CommonModule,
     SharedModule,
